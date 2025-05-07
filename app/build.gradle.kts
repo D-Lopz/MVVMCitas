@@ -43,18 +43,17 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    // Implementar view model
-    /*implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
-    //Life data
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+    //ViewModel
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    //LiveData
+    implementation(libs.androidx.lifecycle.livedata.ktx)
     //Activity
-    implementation("androidx.activity:activity-ktx:1.2.2")*/
-
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
-    implementation("androidx.activity:activity-ktx:1.9.0")
-
-
+    implementation(libs.androidx.activity.ktx)
+    //Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    //Coroutines
+    implementation(libs.kotlinx.coroutines.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

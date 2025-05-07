@@ -1,4 +1,4 @@
-package com.davidlopez.mvvmapp.viewmodel
+package com.davidlopez.mvvmapp.ui.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -8,6 +8,7 @@ import com.davidlopez.mvvmapp.model.QuoteProvider
 
 class QuoteViewModel : ViewModel() {
     val _quoteModel = MutableLiveData<QuoteModel>()
+
     fun randomQuote(){
         val currentQuote = QuoteProvider.random()
         _quoteModel.postValue(currentQuote)
