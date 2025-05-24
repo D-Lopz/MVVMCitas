@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5"
+    android:padding="24dp"
+    tools:context=".ui.view.LoginActivity">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Username Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txilUsername"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+        app:helperText="Aquí ingresa tu username"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="50"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="#000000"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <requestFocus />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txilPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Contraseña"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:startIconDrawable="@android:drawable/ic_lock_lock"
+        app:helperText="Aquí ingresa tu contraseña"
+        app:layout_constraintTop_toBottomOf="@id/txilUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="#000000"
+            android:textColorHint="@android:color/darker_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Fancy Login Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnIniciarSesion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Iniciar Sesión"
+        android:textAllCaps="false"
+        app:cornerRadius="16dp"
+        app:icon="@android:drawable/ic_media_play"
+        app:iconPadding="8dp"
+        app:iconTint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#3F51B5"
+        app:layout_constraintTop_toBottomOf="@id/txilPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

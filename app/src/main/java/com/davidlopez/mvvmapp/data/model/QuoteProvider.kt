@@ -2,7 +2,10 @@ package com.davidlopez.mvvmapp.data.model
 
 class QuoteProvider {
     companion object{
-        fun random(): QuoteModel {
+
+        var quotes: List<QuoteModel> = emptyList()
+
+        /*fun random(): QuoteModel {
             val position = (quoteList.indices).random()
             return quoteList[position]
         }
@@ -15,6 +18,6 @@ class QuoteProvider {
             QuoteModel("Las patadas son la gasolina de las mujeres", "Samuel Mendez"),
             QuoteModel("No subo gordas pq raya ", "Anonimo")
 
-        )
+        )*/
     }
 }
